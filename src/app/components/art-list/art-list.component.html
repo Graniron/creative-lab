@@ -1,0 +1,25 @@
+<div>
+  <h1 class="primary-color center-align">
+    Welcome to Gallary list
+  </h1>
+  <div class='center-align'>
+    <button md-raised-button color="accent" (click)="openDialog()">Instruction</button>
+  </div>
+
+  <md-grid-list cols="2">
+    <md-grid-tile *ngFor="let art of arts">
+      <div>
+        <img width="200"
+             src="https://img.mamsy.ru/uploads/comment/95/e4/50179a8f37e8b20a2326708f476beca6.JPG"
+             routerLink="/arts/{{art}}"
+             alt="art-item"
+             mdTooltip="'nice'">
+        <md-chip-list>
+          <md-chip *ngFor="let chip of chips">
+            {{chip}}
+          </md-chip>
+        </md-chip-list>
+      </div>
+    </md-grid-tile>
+  </md-grid-list>
+</div>

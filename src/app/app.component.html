@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container fullscreen>
+  <md-sidenav #sidenav mode="side">
+    <md-toolbar>
+      <span>
+        <button md-button routerLink="/">Home</button>
+      </span>
+      <md-toolbar-row>
+        <button md-button routerLink="/about">About</button>
+      </md-toolbar-row>
+      <md-toolbar-row>
+        <button md-button routerLink="/contacts">Contacts</button>
+      </md-toolbar-row>
+    </md-toolbar>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <button md-button routerLink="/home">Punny</button>
+  </md-toolbar>
+  <div class="body-margin">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

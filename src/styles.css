@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+body {
+    font-family: Roboto; 
+}
+
+.primary-color {
+    color: #3F51B5 !important;
+}
+
+.accent-color {
+    color: #FF4081 !important;
+}
+
+.background-primary-color {
+    color: #3F51B5 !important;
+}
+
+.background-accent-color {
+    color: #FF4081 !important;
+}
+
+.white-text {
+    color: #fff !important;
+}
+
+.center-align {
+    text-align: center;
+}
