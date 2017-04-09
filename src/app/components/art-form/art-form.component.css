@@ -1,0 +1,36 @@
+.block-sm {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.file-input-wrapper {
+    position: relative;
+}
+
+.cover-photo {
+    position: absolute;
+    left: 0;
+    border: 1px solid red;
+    padding: 20px;
+    opacity: 0;
+}
+
+.btn-upload {
+    margin-bottom: 10px;
+    /*background: #fff;
+    border: 1px solid #333;
+    padding: 6px 20px;
+    border-radius: 30px;*/
+}
+
+.cover-photo:hover {
+    cursor: pointer;
+}

@@ -3,7 +3,7 @@ import 'hammerjs';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -15,6 +15,9 @@ import { ArtListComponent } from './components/art-list/art-list.component';
 import { ArtItemComponent } from './components/art-item/art-item.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AboutComponent } from './components/about/about.component';
+import { ArtFormComponent } from './components/art-form/art-form.component';
+
+import { ArtsService } from './services/arts.service';
 
 @NgModule({
   declarations: [
@@ -22,17 +25,19 @@ import { AboutComponent } from './components/about/about.component';
     ArtListComponent,
     ArtItemComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    ArtFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     BrowserAnimationsModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [ArtsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,38 @@
+<div>
+  <h1 class="primary-color center-align">
+    Add new art
+  </h1>
+
+  <form class="block-sm center-align" [formGroup]='artForm'>
+    <div>
+      <md-input-container class="example-full-width">
+        <input mdInput formControlName='name' placeholder="Name" required>
+      </md-input-container>
+    </div>
+
+    <div>
+       <md-input-container class="example-full-width">        
+        <textarea mdInput 
+                  formControlName='description' 
+                  placeholder="Description"    
+                  required              
+                 ></textarea>
+       </md-input-container>
+    </div>
+  
+    <div>
+      <md-input-container class="example-full-width">
+        <input mdInput formControlName='tag' placeholder="Tag" required>
+      </md-input-container>
+    </div>   
+
+    <div class="file-input-wrapper">
+        <button md-raised-button color="accent" class="btn-upload">Chose file</button>      
+        <input type="file"
+               class="cover-photo"
+               formControlName='photo'>     
+    </div> 
+
+    <button (click)="onSubmit(artForm)" type="submit" md-raised-button>Send</button>   
+  </form>
+</div>
